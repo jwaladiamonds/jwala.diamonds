@@ -82,7 +82,7 @@ a:hover {
 }
 
 .navbar {
-    background-color: transparent;
+    background-color: #000000c4;
 }
 
 .navbar .nav-item {
@@ -96,6 +96,34 @@ a:hover {
 @media only screen and (max-width: 768px) {
     .navbar {
         background-color: #000000bb;
+    }
+}
+
+.titleFont {
+    font-size: 1.8rem;
+}
+
+@media (min-width: 576px) {
+    .titleFont {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .titleFont {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .titleFont {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .titleFont {
+        font-size: 5rem;
     }
 }
 
@@ -124,6 +152,55 @@ a:hover {
     margin-top: 5rem;
     margin-bottom: 15rem;
     background: #ffffff99;
+}
+
+.scroll-down-button {
+    position: absolute;
+    bottom: 0px;
+    height: 6rem;
+    width: 100%;
+}
+
+.scroll-down-button span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #222;
+  border-bottom: 1px solid #222;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
 }
 
 .harvest-rules {
