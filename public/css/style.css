@@ -215,6 +215,16 @@ a:hover {
     }
 }
 
+@media (min-width: 1200px) {
+    .titleFont {
+        font-size: 3rem;
+    }
+
+    .home-page .img-fluid {
+        width: 7rem !important;
+    }
+}
+
 .about-page {
     color: #aaa;
 }
