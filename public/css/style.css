@@ -135,6 +135,13 @@ a:hover {
     width: 100%;
 }
 
+.scroll-down-button>a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin: 10px auto 0px;
+}
+
 .scroll-down-button span {
     position: absolute;
     top: 0;
@@ -266,11 +273,11 @@ a:hover {
     color: #aaa;
 }
 
-.allies-page {
+.clients-page {
     color: #aaa;
 }
 
-.allies-page .card {
+.clients-page .card {
     color: #000;
 }
 
@@ -289,7 +296,8 @@ a:hover {
 }
 
 .testimonial-card .avatar img {
-    width: 100%;
+    padding: 10px;
+    max-height: 100px;
 }
 
 .testimonial-card .card-body {
@@ -298,7 +306,7 @@ a:hover {
 
 .testimonial-card .card-up {
     overflow: hidden;
-    height: 120px;
+    padding: 10px;
     -webkit-border-top-left-radius: .25rem;
     border-top-left-radius: .25rem;
     -webkit-border-top-right-radius: .25rem;
@@ -306,10 +314,7 @@ a:hover {
 }
 
 .testimonial-card .avatar {
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    width: 120px;
-    margin-top: -60px;
     overflow: hidden;
     border: 5px solid #fff;
+    min-height: 150px;
 }
