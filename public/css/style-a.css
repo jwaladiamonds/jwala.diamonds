@@ -1,0 +1,154 @@
+body {
+    position: relative;
+    font-family: 'ABeeZee', sans-serif !important;
+    font-weight: 100;
+    margin: 0;
+}
+
+main {
+    background-color: #ddd;
+}
+
+h2 {
+    font-family: 'Cinzel', serif !important;
+    font-weight: 600;
+    padding-top: 3em;
+    font-size: 3rem;
+}
+
+a {
+    color: #222;
+}
+
+a:hover {
+    color: #777;
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif !important;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+
+.jarallax>.jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-item>.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar .nav-item {
+    padding: 0px 20px;
+}
+
+.top-nav-collapse {
+    background-color: #000000bb;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #000000bb;
+    }
+}
+
+.spacer-1 {
+    height: 2rem;
+}
+
+.spacer-2 {
+    height: 4rem;
+}
+
+.spacer-3 {
+    height: 6rem;
+}
+
+.spacer-4 {
+    height: 8rem;
+}
+
+.spacer-5 {
+    height: 10rem;
+}
+
+.inner-container {
+    padding: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 15rem;
+    background: #ffffff99;
+}
+
+.harvest-rules {
+    padding-top: 2rem;
+    text-align: left;
+}
+
+.home-page,
+.guide-page,
+.map-page,
+.faq-page {
+    min-height: 100vh;
+}
+
+.guide-page {
+    color: #222;
+}
+
+.map-page {
+    color: #fff;
+}
+
+.faq-page {
+    padding-top: 5em;
+    color: #222;
+}
+
+.page-footer {
+    position: absolute;
+    width: 100%;
+}
+.footer-copyright {
+    background-color: #222 !important;
+}
+.testimonial-card .avatar img {
+    width: 100%;
+}
+
+.testimonial-card .card-body {
+    text-align: center;
+}
+
+.testimonial-card .card-up {
+    overflow: hidden;
+    height: 120px;
+    -webkit-border-top-left-radius: .25rem;
+    border-top-left-radius: .25rem;
+    -webkit-border-top-right-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.testimonial-card .avatar {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+}
