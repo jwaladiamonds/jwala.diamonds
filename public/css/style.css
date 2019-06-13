@@ -5,39 +5,19 @@
     font-weight: 500;
 }
 
-@font-face {
-    font-family: 'ABeeZee';
-    src: url('../font/ABeeZee/ABeeZee-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 400;
-}
-
-#mdb-preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000;
-    z-index: 9998;
-    height: 100%;
-    width: 100%
-}
-
-.spinner-border {
-    border-right-color: #f6f6f6ad;
-}
-
-
 body {
     position: relative;
-    font-family: 'ABeeZee', sans-serif !important;
-    font-weight: 100;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    word-spacing: normal;
+    text-rendering: auto;
+    line-height: 1.6rem;
     margin: 0;
 }
 
 main {
-    background-color: #222;
+    background-color: #111;
 }
 
 h2 {
@@ -53,6 +33,11 @@ a {
 
 a:hover {
     color: #777;
+}
+
+.number { 
+    font-family: 'ABeeZee', sans-serif !important;
+    font-weight: 100;
 }
 
 .navbar-brand {
@@ -292,6 +277,10 @@ a:hover {
 
 .jewellery-page {
     color: #aaa;
+}
+
+.feature-panel .f-box {
+    padding: 1rem 3rem;
 }
 
 .clients-page {
