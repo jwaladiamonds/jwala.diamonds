@@ -319,6 +319,7 @@ a:hover {
 .testimonial-card .avatar img {
     padding: 10px;
     max-height: 100px;
+    max-width: 100%;
 }
 
 .testimonial-card .card-body {
