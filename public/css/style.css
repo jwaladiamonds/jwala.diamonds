@@ -71,7 +71,7 @@ a:hover {
 }
 
 .navbar .nav-item {
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 .top-nav-collapse {
@@ -289,6 +289,10 @@ a:hover {
 
 .feature-panel .f-box {
   padding: 1rem 3rem;
+}
+
+.carousel-inner {
+  cursor: pointer;
 }
 
 .carousel-thumbnails .carousel-indicators {

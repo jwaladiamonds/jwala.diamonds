@@ -10,6 +10,7 @@
   <!--[if IE]><link rel="shortcut icon" href="public/img/logo/favicon.ico"><![endif]-->
   <link rel="shortcut icon" href="public/img/logo/favicon.png">
   <title>Jwala Diamonds &amp; Jewellers</title>
+  <link href="public/css/preloader.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=ABeeZee|Raleway:300&display=swap" rel="stylesheet">
   <link href="public/css/fontawesome.css" rel="stylesheet">
   <link href="public/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +21,42 @@
 </head>
 
 <body data-spy="scroll" data-target="#nav-bar">
+  <div class="preloader">
+    <div class="diamond-loader">
+      <div class="row">
+        <div class="arrow up outer outer-18"></div>
+        <div class="arrow down outer outer-17"></div>
+        <div class="arrow up outer outer-16"></div>
+        <div class="arrow down outer outer-15"></div>
+        <div class="arrow up outer outer-14"></div>
+      </div>
+      <div class="row">
+        <div class="arrow up outer outer-1"></div>
+        <div class="arrow down outer outer-2"></div>
+        <div class="arrow up inner inner-6"></div>
+        <div class="arrow down inner inner-5"></div>
+        <div class="arrow up inner inner-4"></div>
+        <div class="arrow down outer outer-13"></div>
+        <div class="arrow up outer outer-12"></div>
+      </div>
+      <div class="row">
+        <div class="arrow down outer outer-3"></div>
+        <div class="arrow up outer outer-4"></div>
+        <div class="arrow down inner inner-1"></div>
+        <div class="arrow up inner inner-2"></div>
+        <div class="arrow down inner inner-3"></div>
+        <div class="arrow up outer outer-11"></div>
+        <div class="arrow down outer outer-10"></div>
+      </div>
+      <div class="row">
+        <div class="arrow down outer outer-5"></div>
+        <div class="arrow up outer outer-6"></div>
+        <div class="arrow down outer outer-7"></div>
+        <div class="arrow up outer outer-8"></div>
+        <div class="arrow down outer outer-9"></div>
+      </div>
+    </div>
+  </div>
   <!-- NAVIGATION TOP BAR -->
   <nav id="nav-bar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
@@ -52,10 +89,10 @@
     <!-- HOME -->
     <div id="nav-home" class="d-none"></div>
     <div class="view jarallax pages home-page">
-      <img class="jarallax-img lazyload" data-src="public/img/bg/bgw.jpg">
+      <img class="jarallax-img" src="public/img/bg/bgw.jpg">
       <div class="mask d-flex justify-content-center align-items-center">
         <div class="text-center wow fadeIn">
-          <img class="img-fluid m-auto" src="public/img/logo/single-logo.png">
+          <img class="lazyload img-fluid m-auto" data-src="public/img/logo/single-logo.png">
           <h2 class="titleFont display-3 mb-2 pt-0" style="color:black;font-weight:800;">
             Jwala Diamonds &amp; Jewellers
           </h2>
@@ -144,7 +181,7 @@
     </div>
     <!-- PRODUCTS -->
     <div class="view jarallax pages products-page">
-      <img class="jarallax-img lazyload" data-src="public/img/bg/bgw.jpg">
+      <img class="jarallax-img" src="public/img/bg/bgw.jpg">
       <div id="nav-products" class="container">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -160,7 +197,7 @@
               <div class="card card-cascade wider mb-4">
                 <!-- Card image -->
                 <div class="view view-cascade overlay">
-                  <img class="card-img-top" src="public/img/designs/diamond.jpg" alt="Card image cap">
+                  <img class="lazyload card-img-top" data-src="public/img/designs/diamond.jpg" alt="Card image cap">
                   <a href="#!">
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -177,7 +214,7 @@
               <div class="card card-cascade wider mb-4">
                 <!--Card image-->
                 <div class="view view-cascade overlay">
-                  <img class="card-img-top" src="public/img/designs/navratna.jpg" alt="Card image cap">
+                  <img class="lazyload card-img-top" data-src="public/img/designs/navratna.jpg" alt="Card image cap">
                   <a href="#!">
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -195,7 +232,7 @@
               <div class="card card-cascade wider mb-4">
                 <!--Card image-->
                 <div class="view view-cascade overlay">
-                  <img class="card-img-top" src="public/img/designs/birthstone.jpg" alt="Card image cap">
+                  <img class="lazyload card-img-top" data-src="public/img/designs/birthstone.jpg" alt="Card image cap">
                   <a href="#!">
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -270,7 +307,7 @@
     </div>
     <!-- DIAMONDS -->
     <div class="view jarallax pages diamonds-page">
-      <img class="jarallax-img lazyload" data-src="public/img/bg/bgw.jpg">
+      <img class="jarallax-img" src="public/img/bg/bgw.jpg">
       <div id="nav-diamonds" class="container-fluid">
         <div class="row">
           <div class="col-sm-12 text-center">
@@ -384,10 +421,10 @@
               <div class="col-md-12 col-lg-6">
                 <ul class="list-unstyled">
                   <li>
-                    <p><i class="fas fa-phone mr-3"></i> <span class="number">+91 86069 08385</span></p>
+                    <p><a class="number" href="tel:+918606908385"><i class="fas fa-phone mr-3"></i> +91 86069 08385</a></p>
                   </li>
                   <li>
-                    <p><i class="fas fa-phone mr-3"></i> <span class="number">+91 86069 08386</span></p>
+                    <p><a class="number" href="tel:+918606908386"><i class="fas fa-phone mr-3"></i> +91 86069 08386</a></p>
                   </li>
                 </ul>
               </div>
@@ -400,10 +437,10 @@
               <div class="col-md-12 col-lg-6">
                 <ul class="list-unstyled">
                   <li>
-                    <p><i class="fas fa-phone mr-3"></i> <span class="number">+91 86069 08385</span></p>
+                    <p><a class="number" href="tel:+918606908385"><i class="fas fa-phone mr-3"></i> +91 86069 08385</a></p>
                   </li>
                   <li>
-                    <p><i class="fas fa-phone mr-3"></i> <span class="number">+91 86069 08386</span></p>
+                    <p><a class="number" href="tel:+918606908386"><i class="fas fa-phone mr-3"></i> +91 86069 08386</a></p>
                   </li>
                 </ul>
               </div>
@@ -416,10 +453,10 @@
               <div class="col-md-12 col-lg-6">
                 <ul class="list-unstyled">
                   <li>
-                    <p><i class="fas fa-phone mr-3"></i> <span class="number">+91 487 2426112</span></p>
+                    <p><a class="number" href="tel:+914872426112"><i class="fas fa-phone mr-3"></i> +91 487 2426112</a></p>
                   </li>
                   <li>
-                    <p><i class="fas fa-phone mr-3"></i> <span class="number">+91 487 2427739</span></p>
+                    <p><a class="number" href="tel:+914872427739"><i class="fas fa-phone mr-3"></i> +91 487 2427739</a></p>
                   </li>
                 </ul>
               </div>
@@ -429,16 +466,16 @@
             <h6 class="font-weight-bold text-uppercase my-3 mt-4">Email Contacts</h6>
             <ul class="list-unstyled">
               <li>
-                <p><i class="fas fa-envelope mr-3"></i>ceo@jwala.diamonds</p>
+                <p><a href="mailto:ceo@jwala.diamonds"><i class="fas fa-envelope mr-3"></i>ceo@jwala.diamonds</a></p>
               </li>
               <li>
-                <p><i class="fas fa-envelope mr-3"></i>hq@jwala.diamonds</p>
+                <p><a href="mailto:hq@jwala.diamonds"><i class="fas fa-envelope mr-3"></i>hq@jwala.diamonds</a></p>
               </li>
               <li>
-                <p><i class="fas fa-envelope mr-3"></i>admin@jwala.diamonds</p>
+                <p><a href="mailto:admin@jwala.diamonds"><i class="fas fa-envelope mr-3"></i>admin@jwala.diamonds</a></p>
               </li>
               <li>
-                <p><i class="fas fa-envelope mr-3"></i>order@jwala.diamonds</p>
+                <p><a href="mailto:order@jwala.diamonds"><i class="fas fa-envelope mr-3"></i>order@jwala.diamonds</a></p>
               </li>
             </ul>
           </div>
@@ -446,7 +483,7 @@
       </div>
       <div class="spacer-2"></div>
       <div id="map-container-google" class="z-depth-1-half map-container">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34&q=place_id:ChIJexD4vknupzsR20A0b1iUbnY" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <!-- <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34&q=place_id:ChIJexD4vknupzsR20A0b1iUbnY" frameborder="0" style="border:0" allowfullscreen></iframe> -->
       </div>
       <div class="footer-copyright text-center pb-3 pt-5">
         <div class="container">
@@ -519,12 +556,18 @@
   <script type="text/javascript" src="public/js/photoswipe/photoswipe.min.js"></script>
   <script type="text/javascript" src="public/js/photoswipe/photoswipe-ui-default.min.js"></script>
   <script type="text/javascript" src="public/js/photoswipe/photoswipe-custom.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34"></script>
+  <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34&callback=initMap"></script>
   <!-- Start of  Zendesk Widget script -->
-  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=954ae130-9cfc-45bc-84c5-b40660834586"> </script>
+  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=954ae130-9cfc-45bc-84c5-b40660834586" async> </script>
   <!-- End of  Zendesk Widget script -->
   <script type="text/javascript">
   $(document).ready(function() {
+    $.when(jQuery.each([
+      "public/img/logo/single-logo.png",
+      "public/img/bg/bgw.jpg"
+    ], function(i, source) { jQuery.get(source); })).done(function() {
+      $(".preloader").delay(400).fadeOut(800);
+    });
     $(".scrollTo").on('click', function(event) {
       if (this.hash !== "") {
         event.preventDefault();
@@ -537,13 +580,6 @@
       };
       $('#navbarSupportedContent').collapse('hide');
     });
-    $("body").attr("aria-busy", !0),
-      $("#preloader-markup").load("./public/html/preload.html",
-        function() {
-          $(window).on("load", function() {
-            $("#mdb-preloader").fadeOut("slow"), $("body").removeAttr("aria-busy")
-          })
-        });
     $(".wow-in").addClass("wow fadeIn");
     new WOW().init();
     objectFitImages();
@@ -564,6 +600,25 @@
       const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
       gallery.init();
     });
+  });
+  $(window).on('load', function() {
+    jQuery.each([
+      "public/img/gallery/img01.jpg",
+      "public/img/gallery/img02.jpg",
+      "public/img/gallery/img03.jpg",
+      "public/img/gallery/img04.jpg",
+      "public/img/gallery/img05.jpg",
+      "public/img/gallery/img06.jpg",
+      "public/img/gallery/img07.jpg",
+      "public/img/gallery/img08.jpg",
+      "public/img/gallery/img09.jpg"
+    ], function(i, source) { jQuery.get(source); });
+    const initMap = function() {
+      const map = new google.maps.Map(document.getElementById('map-container-google'), {
+        center: { lat: 10.515592, lng: 76.211514 },
+        zoom: 17
+      });
+    } //AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg 
   });
   </script>
 </body>
