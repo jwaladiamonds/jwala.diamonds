@@ -8,7 +8,7 @@ const initPhotoSwipeFromDOM = function(gallerySelector) {
 
     for (let i = 0; i < numNodes; i++) {
 
-      figureEl = thumbElements[i]; 
+      figureEl = thumbElements[i];
 
       // include only element nodes 
       if (figureEl.nodeType !== 1) {
