@@ -482,8 +482,8 @@
         </div>
       </div>
       <div class="spacer-2"></div>
-      <div id="map-container-google" class="z-depth-1-half map-container">
         <!-- <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34&q=place_id:ChIJexD4vknupzsR20A0b1iUbnY" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+      <div id="map-container-google" class="z-depth-1-half map-container">
       </div>
       <div class="footer-copyright text-center pb-3 pt-5">
         <div class="container">
@@ -561,13 +561,14 @@
   <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=954ae130-9cfc-45bc-84c5-b40660834586" async> </script>
   <!-- End of  Zendesk Widget script -->
   <script type="text/javascript">
-  let map;
+  let map,c=1;
   $(document).ready(function() {
     $.when(jQuery.each([
       "public/img/logo/single-logo.png",
       "public/img/bg/bgw.jpg"
     ], function(i, source) { jQuery.get(source); })).done(function() {
       $(".preloader").delay(400).fadeOut(800);
+      ct("Preloaded");
     });
     $(".scrollTo").on('click', function(event) {
       if (this.hash !== "") {
@@ -603,6 +604,7 @@
     });
   });
   $(window).on('load', function() {
+    ct("window loaded")
     jQuery.each([
       "public/img/gallery/img01.jpg",
       "public/img/gallery/img02.jpg",
@@ -614,13 +616,19 @@
       "public/img/gallery/img08.jpg",
       "public/img/gallery/img09.jpg"
     ], function(i, source) { jQuery.get(source); });
+    ct("initMap is loading...");
     const initMap = function() {
+      ct("This is inside initMap");
       map = new google.maps.Map(document.getElementById('map-container-google'), {
         center: { lat: 10.515592, lng: 76.211514 },
         zoom: 17
       });
     }
   });
+  function ct(m){
+    console.log(c," : ",m);
+    c += 1;
+  }
   </script>
 </body>
 
