@@ -196,6 +196,11 @@ a:hover {
     font-size: 1.1rem;
 }
 
+.motoFont {
+    margin-top: 2rem;
+    font-size: 0.6rem;
+}
+
 .home-page .unicontent {
     margin-top: 4rem;
 }
@@ -209,6 +214,11 @@ a:hover {
         font-size: 2rem;
     }
 
+    .motoFont {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+    }
+
     .home-page .img-fluid {
         width: 5rem !important;
     }
@@ -217,6 +227,11 @@ a:hover {
 @media (min-width: 1200px) {
     .titleFont {
         font-size: 3rem;
+    }
+
+    .motoFont {
+        margin-top: 4rem;
+        font-size: 1.25rem;
     }
 
     .home-page .img-fluid {
