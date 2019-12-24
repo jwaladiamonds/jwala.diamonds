@@ -298,6 +298,27 @@ a:hover {
     padding: 1rem 3rem;
 }
 
+.carousel-thumbnails .carousel-indicators {
+    position: static;
+    left: initial;
+    width: initial;
+    margin-right: initial;
+    margin-left: initial;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.carousel-thumbnails .carousel-indicators > li {
+    width: initial;
+    height: initial;
+    text-indent: initial;
+}
+
+.carousel-thumbnails .carousel-indicators>li .active img {
+  opacity: 1
+}
+
+
 .clients-page {
     color: #222;
 }
