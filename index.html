@@ -308,7 +308,7 @@
     <!-- DIAMONDS -->
     <div class="view jarallax pages diamonds-page">
       <img class="jarallax-img" src="public/img/bg/bgw.jpg">
-      <div id="nav-diamonds" class="container-fluid">
+      <div id="nav-diamonds" class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
             <h2 class="my-5 py-5">Our Diamonds</h2>
@@ -317,7 +317,7 @@
         <div class="row">
           <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails col-12 wow fadeIn" data-ride="carousel">
             <!--Slides-->
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner z-depth-1-half" role="listbox">
               <div class="carousel-item active">
                 <img class="d-block w-100" src="public/img/gallery/img01.jpg">
               </div>
@@ -482,8 +482,8 @@
         </div>
       </div>
       <div class="spacer-2"></div>
+      <!-- <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34&q=place_id:ChIJexD4vknupzsR20A0b1iUbnY" frameborder="0" style="border:0" allowfullscreen></iframe> -->
       <div id="map-container-google" class="z-depth-1-half map-container">
-        <!-- <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34&q=place_id:ChIJexD4vknupzsR20A0b1iUbnY" frameborder="0" style="border:0" allowfullscreen></iframe> -->
       </div>
       <div class="footer-copyright text-center pb-3 pt-5">
         <div class="container">
@@ -556,11 +556,12 @@
   <script type="text/javascript" src="public/js/photoswipe/photoswipe.min.js"></script>
   <script type="text/javascript" src="public/js/photoswipe/photoswipe-ui-default.min.js"></script>
   <script type="text/javascript" src="public/js/photoswipe/photoswipe-custom.js"></script>
-  <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGAy2eC1SLmTpI6aw4mkphqBn1nFmDd34&callback=initMap"></script>
+  <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&callback=initMap&libraries=places"></script>
   <!-- Start of  Zendesk Widget script -->
   <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=954ae130-9cfc-45bc-84c5-b40660834586" async> </script>
   <!-- End of  Zendesk Widget script -->
   <script type="text/javascript">
+  let map;
   $(document).ready(function() {
     $.when(jQuery.each([
       "public/img/logo/single-logo.png",
@@ -613,13 +614,32 @@
       "public/img/gallery/img08.jpg",
       "public/img/gallery/img09.jpg"
     ], function(i, source) { jQuery.get(source); });
-    const initMap = function() {
-      const map = new google.maps.Map(document.getElementById('map-container-google'), {
-        center: { lat: 10.515592, lng: 76.211514 },
-        zoom: 17
-      });
-    } //AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg 
   });
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map-container-google'), {
+      center: { lat: 10.515592, lng: 76.211514 },
+      zoom: 17
+    });
+    const request = {
+      placeId: 'ChIJexD4vknupzsR20A0b1iUbnY',
+      fields: ['name', 'formatted_address', 'geometry']
+    };
+    let info = new google.maps.InfoWindow();
+    let service = new google.maps.places.PlacesService(map);
+    service.getDetails(request, function(place, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+        info.setContent('<div><strong>' + place.name + '</strong><br>' +
+          place.formatted_address + '</div>');
+        info.open(map, this);
+      }
+    });
+
+  }
   </script>
 </body>
 

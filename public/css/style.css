@@ -312,7 +312,7 @@ a:hover {
 }
 
 .carousel-thumbnails .carousel-indicators>li .active img {
-  opacity: 1
+  opacity: 1;
 }
 
 .diamonds-page {
