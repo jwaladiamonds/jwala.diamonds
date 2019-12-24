@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Jwala Diamonds &amp; Jewellers : 404</title>
+  <link href="public/css/preloader.css" rel="stylesheet">
   <link href="public/css/addons/fontawesome.css" rel="stylesheet">
   <link href="public/css/bootstrap.min.css" rel="stylesheet">
   <link href="public/css/mdb.min.css" rel="stylesheet">
@@ -13,6 +14,42 @@
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="diamond-loader">
+      <div class="row">
+        <div class="arrow up outer outer-18"></div>
+        <div class="arrow down outer outer-17"></div>
+        <div class="arrow up outer outer-16"></div>
+        <div class="arrow down outer outer-15"></div>
+        <div class="arrow up outer outer-14"></div>
+      </div>
+      <div class="row">
+        <div class="arrow up outer outer-1"></div>
+        <div class="arrow down outer outer-2"></div>
+        <div class="arrow up inner inner-6"></div>
+        <div class="arrow down inner inner-5"></div>
+        <div class="arrow up inner inner-4"></div>
+        <div class="arrow down outer outer-13"></div>
+        <div class="arrow up outer outer-12"></div>
+      </div>
+      <div class="row">
+        <div class="arrow down outer outer-3"></div>
+        <div class="arrow up outer outer-4"></div>
+        <div class="arrow down inner inner-1"></div>
+        <div class="arrow up inner inner-2"></div>
+        <div class="arrow down inner inner-3"></div>
+        <div class="arrow up outer outer-11"></div>
+        <div class="arrow down outer outer-10"></div>
+      </div>
+      <div class="row">
+        <div class="arrow down outer outer-5"></div>
+        <div class="arrow up outer outer-6"></div>
+        <div class="arrow down outer outer-7"></div>
+        <div class="arrow up outer outer-8"></div>
+        <div class="arrow down outer outer-9"></div>
+      </div>
+    </div>
+  </div>
   <main>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
       <div class="container">
@@ -35,6 +72,16 @@
     </div>
   </main>
   <script type="text/javascript" src="public/js/lazysizes.min.js" async></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $.when(jQuery.each([
+      "public/img/logo/single-logo.png",
+      "public/img/bg/bgw.jpg"
+    ], function(i, source) { jQuery.get(source); })).done(function() {
+      $(".preloader").delay(400).fadeOut(800);
+    });
+  });
+  </script>
 </body>
 
 </html>
