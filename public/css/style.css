@@ -232,7 +232,7 @@ a:hover {
   }
 }
 
-.about-page {
+.about-page, .jewellery-page, .terms-page {
   color: #aaa;
 }
 
@@ -279,12 +279,8 @@ a:hover {
   text-align: left;
 }
 
-.products-page {
+.products-page, .privacy-page {
   color: #222;
-}
-
-.jewellery-page {
-  color: #aaa;
 }
 
 .feature-panel .f-box {
