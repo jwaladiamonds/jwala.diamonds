@@ -10,7 +10,7 @@
   <!--[if IE]><link rel="shortcut icon" href="public/img/logo/favicon.ico"><![endif]-->
   <link rel="shortcut icon" href="public/img/logo/favicon.png">
   <title>Jwala Diamonds &amp; Jewellers</title>
-  <link href="public/css/preloader.css" rel="stylesheet">
+  <link rel="preload" as="style" href="public/css/preloader.css">
   <link href="https://fonts.googleapis.com/css?family=ABeeZee|Raleway:300&display=swap" rel="stylesheet">
   <link href="public/css/fontawesome.css" rel="stylesheet">
   <link href="public/css/bootstrap.min.css" rel="stylesheet">
@@ -463,9 +463,7 @@
         </div>
       </div>
       <div class="spacer-2"></div>
-      <div id="map-container-google" class="z-depth-1-half map-container">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
+      <div id="map-container-google" class="z-depth-1-half map-container"></div>
       <div class="footer-copyright text-center pb-3 pt-5">
         <div class="container">
           <div class="row">
@@ -516,18 +514,18 @@
   <!-- SCRIPTS -->
   <script type="text/javascript" src="public/js/lazysizes.min.js" async></script>
   <script type="text/javascript" src="public/js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="public/js/popper.min.js"></script>
+  <!-- <script type="text/javascript" src="public/js/popper.min.js"></script> -->
   <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="public/js/mdb.min.js"></script>
   <script type="text/javascript" src="public/js/ofi.min.js"></script>
   <script type="text/javascript" src="public/js/jarallax/jarallax.min.js"></script>
-  <script type="text/javascript" src="public/js/jarallax/jarallax-video.min.js"></script>
+  <!-- <script type="text/javascript" src="public/js/jarallax/jarallax-video.min.js"></script> -->
   <script type="text/javascript" src="public/js/jarallax/jarallax-element.min.js"></script>
   <script type="text/javascript" src="public/js/photoswipe/photoswipe.min.js"></script>
   <script type="text/javascript" src="public/js/photoswipe/photoswipe-ui-default.min.js"></script>
   <script type="text/javascript" src="public/js/photoswipe/photoswipe-custom.js"></script>
   <!-- Start of  Zendesk Widget script -->
-  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=954ae130-9cfc-45bc-84c5-b40660834586" async> </script>
+  <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=954ae130-9cfc-45bc-84c5-b40660834586" async> </script> -->
   <!-- End of  Zendesk Widget script -->
   <script type="text/javascript">
   $(document).ready(function() {
@@ -589,6 +587,7 @@
       "public/img/gallery/img09.jpg",
       "public/img/designs/footer-image.png"
     ], function(i, source) { jQuery.get(source); });
+    $('#map-container-google').html('<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>')
   });
   </script>
 </body>
