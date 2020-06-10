@@ -3,6 +3,7 @@
   src: url('../webfonts/Rawengulk/RawengulkPcs.otf') format('truetype');
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
 }
 
 body {
