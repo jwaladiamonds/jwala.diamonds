@@ -376,3 +376,8 @@ a:hover {
   -webkit-border-radius: 0 0 .25rem .25rem;
   border-radius: 0 0 .25rem .25rem;
 }
+
+a.btn-floating > i.fab {
+  width: 1.5rem;
+  text-align: center;
+}
