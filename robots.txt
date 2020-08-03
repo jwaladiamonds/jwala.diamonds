@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /public
+Allow: /public/img/bg/share-preview.jpg
 Allow: /public/img/logo
 Allow: /public/img/profile
