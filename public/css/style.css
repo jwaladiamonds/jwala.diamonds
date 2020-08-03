@@ -377,7 +377,13 @@ a:hover {
   border-radius: 0 0 .25rem .25rem;
 }
 
-a.btn-floating > i.fab {
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a.btn-floating>i.fab {
   width: 1.5rem;
   text-align: center;
 }
