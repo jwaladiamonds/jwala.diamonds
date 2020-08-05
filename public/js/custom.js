@@ -12,6 +12,20 @@ images.forEach((item, id) => {
   }
 })
 
+if ('loading' in HTMLImageElement.prototype) {
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]')
+  lazyImages.forEach(img => {
+    img.src = img.dataset.src
+    if (img.hasAttribute('data-srcset')) {
+      img.srcset = img.dataset.srcset
+    }
+  })
+} else {
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js'
+  document.body.appendChild(script)
+}
+
 $(document).ready(async function() {
   const pswpElement = document.querySelector('.pswp')
   const options = {
@@ -57,5 +71,5 @@ $(document).ready(async function() {
   })
 
   // Google Map
-  $('#map-container-google').html('<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>')
+  $('#map-container-google').html('<iframe title="Google Map of Jwala Diamonds" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>')
 })

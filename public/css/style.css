@@ -76,6 +76,10 @@ a:hover {
   padding: 0px 10px;
 }
 
+.navbar .nav-item .nav-link {
+    font-size: 0.8rem;
+}
+
 .top-nav-collapse {
   background-color: #000000bb;
 }
