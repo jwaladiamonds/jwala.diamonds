@@ -21,6 +21,7 @@ main {
   background-color: #111;
 }
 
+h1,
 h2 {
   font-family: 'Rawengulk', serif !important;
   font-weight: 600;
@@ -234,7 +235,7 @@ a:hover {
 }
 
 .about-page, .jewellery-page, .terms-page {
-  color: #aaa;
+  color: #ddd;
 }
 
 .carousel img {
@@ -280,8 +281,13 @@ a:hover {
   text-align: left;
 }
 
-.products-page, .privacy-page {
+.diamonds-page, .products-page, .privacy-page {
   color: #222;
+  background-color: #e8edf1;
+}
+
+.products-page h3 {
+  font-size: 1.5rem;
 }
 
 .feature-panel .f-box {
@@ -310,10 +316,6 @@ a:hover {
 
 .carousel-thumbnails .carousel-indicators>li .active img {
   opacity: 1;
-}
-
-.diamonds-page {
-  color: #222;
 }
 
 .diamonds-page .card {
@@ -375,6 +377,10 @@ a:hover {
   z-index: 1;
   -webkit-border-radius: 0 0 .25rem .25rem;
   border-radius: 0 0 .25rem .25rem;
+}
+
+footer.page-footer h4 {
+  font-size: 1rem !important;
 }
 
 button, html [type="button"], [type="reset"], [type="submit"] {
