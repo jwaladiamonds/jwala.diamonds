@@ -1,3 +1,6 @@
+let imagesLoaded = 0,
+  thumbsLoaded = 0
+
 if ('loading' in HTMLImageElement.prototype) {
   const lazyImages = document.querySelectorAll('img[loading="lazy"]')
   lazyImages.forEach(img => {
@@ -11,8 +14,6 @@ if ('loading' in HTMLImageElement.prototype) {
   script.src = 'public/js/lazysizes.min.js'
   document.body.appendChild(script)
 }
-
-let imagesLoaded = 0, thumbsLoaded = 0
 
 class ImageLoader {
   constructor() {
@@ -60,20 +61,18 @@ imageLoader.waitToLoad((image, count) => {
 })
 
 // FadeIn images
-imageLoader.onLoad('fadeIn',(image, count) => {
+imageLoader.onLoad('fadeIn', (image, count) => {
   image.classList.remove('fadeIn')
 })
 
 // FadeIn Carousel
-imageLoader.onLoad('thumbs',(image, count) => {
+imageLoader.onLoad('thumbs', (image, count) => {
   thumbsLoaded++
   if (thumbsLoaded === count) {
     document.querySelector('.carousel.fadeIn').classList.remove('fadeIn')
   }
 })
 
-
-//*
 $(document).ready(function() {
 
   // Smooth Scroll Effect
@@ -98,11 +97,6 @@ $(document).ready(function() {
   jarallax(document.querySelectorAll('.jarallax-keep-img'), {
     keepImg: true
   });
-
-  // Google Map
-  const mapKey = 'AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg'
-  const mapTag = '<iframe title="Google Map of Jwala Diamonds" src="https://www.google.com/maps/embed/v1/place?key=' + mapKey + '&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>'
-  $('#map-container-google').html(mapTag)
 })
 
 document.onreadystatechange = function() {
