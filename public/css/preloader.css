@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'Rawengulk';
+  src: url('../webfonts/Rawengulk/RawengulkPcs.otf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+main {
+  background-color: #111;
+}
+
+a {
+  color: #222;
+}
+
+a:hover {
+  color: #777;
+}
+
 .preloader {
   width: 100vw;
   height: 100vh;
@@ -158,29 +178,13 @@
 }
 
 @-webkit-keyframes blink {
-  0% {
-    opacity: 0.1;
-  }
-
-  30% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.1;
-  }
+  0% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0.1; }
 }
 
 @keyframes blink {
-  0% {
-    opacity: 0.1;
-  }
-
-  30% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.1;
-  }
+  0% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0.1; }
 }

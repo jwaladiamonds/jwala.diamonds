@@ -25,12 +25,8 @@ if ('loading' in HTMLImageElement.prototype) {
   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js'
   document.body.appendChild(script)
 }
-
+//*
 $(document).ready(async function() {
-  const pswpElement = document.querySelector('.pswp')
-  const options = {
-    showHideOpacity: true
-  }
 
   // Smooth Scroll Effect
   $(".scrollTo").on('click', function(event) {
@@ -47,8 +43,8 @@ $(document).ready(async function() {
   });
 
   // Wow effects
-  new WOW().init();
-  $(".wow-in").addClass("wow fadeIn");
+  // new WOW().init();
+  // $(".wow-in").addClass("wow fadeIn");
 
   // Image correction
   objectFitImages();
@@ -59,17 +55,28 @@ $(document).ready(async function() {
     keepImg: true,
   });
 
-  // Carousel Gallery
-  $(".carousel-item>img").click(function() {
-    const items = [{
-      src: this.src,
-      w: 1620,
-      h: 1080
-    }]
-    let gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-  })
-
   // Google Map
-  $('#map-container-google').html('<iframe title="Google Map of Jwala Diamonds" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>')
+  //$('#map-container-google').html('<iframe title="Google Map of Jwala Diamonds" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>')
 })
+
+//*/
+
+document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+      const pswpElement = document.querySelector('.pswp')
+      const options = {
+        showHideOpacity: true
+      }
+
+      // Carousel Gallery
+      $(".carousel-item>img").click(function() {
+        const items = [{
+          src: this.src,
+          w: 1620,
+          h: 1080
+        }]
+        let gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+      })
+    }
+}
