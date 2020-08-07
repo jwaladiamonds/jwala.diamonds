@@ -100,7 +100,9 @@ $(document).ready(function() {
   });
 
   // Google Map
-  //$('#map-container-google').html('<iframe title="Google Map of Jwala Diamonds" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>')
+  const mapKey = 'AIzaSyDNLVEUc-pMs2303wH9hOyzuc8qzccwnZg'
+  const mapTag = '<iframe title="Google Map of Jwala Diamonds" src="https://www.google.com/maps/embed/v1/place?key=' + mapKey + '&q=Jwala%20Diamonds%20and%20Jewellery,Thrissur&region=IN" frameborder="0" style="border:0" allowfullscreen></iframe>'
+  $('#map-container-google').html(mapTag)
 })
 
 document.onreadystatechange = function() {
