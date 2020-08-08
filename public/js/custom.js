@@ -1,3 +1,4 @@
+const webpSupported = !!self.createImageBitmap
 let imagesLoaded = 0,
   thumbsLoaded = 0
 
@@ -25,13 +26,25 @@ class ImageLoader {
     this.list[key] = nodeList
   }
 
+  getImageURL(node) {
+    let src
+    if ("src" in node.dataset) {
+      if (webpSupported && node.classList.contains('webp')) {
+        src = node.dataset.src.replace('.jpg', '.webp')
+      } else {
+        src = node.dataset.src
+      }
+    }
+    return src
+  }
+
   waitToLoad(callback) {
     const count = this.waitList.length
     this.waitList.forEach((node, id) => {
       let image = new Image()
-      if ("src" in node.dataset) image.src = node.dataset.src
-      else image.src = node.src
+      image.src = this.getImageURL(node)
       image.onload = function(e) {
+        node.src = image.src
         callback(node, count)
       }
     })
