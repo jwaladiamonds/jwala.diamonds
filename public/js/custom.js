@@ -1,6 +1,5 @@
 const webpSupported = !!self.createImageBitmap
-let imagesLoaded = 0,
-  thumbsLoaded = 0
+let imagesLoaded = 0,thumbsLoaded = 0
 
 if ('loading' in HTMLImageElement.prototype) {
   const lazyImages = document.querySelectorAll('img[loading="lazy"]')
@@ -40,14 +39,18 @@ class ImageLoader {
 
   waitToLoad(callback) {
     const count = this.waitList.length
-    this.waitList.forEach((node, id) => {
-      let image = new Image()
-      image.src = this.getImageURL(node)
-      image.onload = function(e) {
-        node.src = image.src
-        callback(node, count)
-      }
-    })
+    if (count == 0) {
+      callback(0)
+    } else {
+      this.waitList.forEach((node, id) => {
+        let image = new Image()
+        image.src = this.getImageURL(node)
+        image.onload = function(e) {
+          node.src = image.src
+          callback(count)
+        }
+      })
+    }
   }
 
   onLoad(key, callback) {
@@ -68,7 +71,7 @@ imageLoader.loadImages('thumbs', document.querySelectorAll('.carousel-indicators
 // Preloading
 imageLoader.waitToLoad((image, count) => {
   imagesLoaded++
-  if (imagesLoaded === count) {
+  if (imagesLoaded === count || count == 0) {
     $(".preloader").delay(400).fadeOut(800);
   }
 })
