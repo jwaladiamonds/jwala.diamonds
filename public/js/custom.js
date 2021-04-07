@@ -69,7 +69,7 @@ imageLoader.loadImages('fadeIn', document.querySelectorAll('img.fadeIn'))
 imageLoader.loadImages('thumbs', document.querySelectorAll('.carousel-indicators img'))
 
 // Preloading
-imageLoader.waitToLoad((image, count) => {
+imageLoader.waitToLoad((count) => {
   imagesLoaded++
   if (imagesLoaded === count || count == 0) {
     $(".preloader").delay(400).fadeOut(800);
